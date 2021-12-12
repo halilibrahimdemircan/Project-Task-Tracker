@@ -1,12 +1,12 @@
 import React from "react";
 import "../App.css";
 
-export default function Button({ color, text, handleClick }) {
+export default function Button({ color, text, showAddTaskBar }) {
   return (
     <div>
       <button
         className="btn"
-        onClick={handleClick}
+        onClick={showAddTaskBar}
         style={{ backgroundColor: color }}
       >
         {text}

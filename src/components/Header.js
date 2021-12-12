@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "./Button";
 
-export default function Header({ title }) {
+export default function Header({ title, showAddTask, showAddTaskBar }) {
   const handleClick = () => {
-    console.log("clicked from header");
+    // console.log("clicked from header");
   };
   return (
     <div>
@@ -13,8 +13,9 @@ export default function Header({ title }) {
 
       <Button
         handleClick={handleClick}
-        color="purple"
-        text="Show Add Task Bar"
+        color={showAddTask ? "red" : "purple"}
+        text={showAddTask ? "Close Add Task Bar" : "Show Add Task Bar"}
+        showAddTaskBar={showAddTaskBar}
       />
     </div>
   );
